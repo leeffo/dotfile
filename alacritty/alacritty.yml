@@ -1,0 +1,134 @@
+window:
+  # 窗口尺寸
+  dimensions:
+    columns: 90
+    lines: 30
+
+  # 窗口位置，以左下角为原点，使用像素点表示
+  # position:
+  #   x:  0
+  #   y:  0
+
+  # 橱窗装饰
+  #   - full  边框和标题栏
+  #   - none  既没有边框也没有标题栏
+  decorations: full
+
+  # 启动模式
+  # Windowed    窗口化
+  # Maximized   最大化
+  # Fullscreen  全屏
+  startup_mode: Windowed
+
+  # 窗口标题
+  title: Alacritty
+
+  # 允许终端应用程序更改窗口标题
+  dynamic_title: true
+
+  # 背景半透明
+  opacity: 0.8
+
+# 历史行数
+scrolling:
+  history: 10000
+
+  # 滚动距离乘以行数
+  multiplier: 3
+
+# 字体
+font:
+  # 字体大小
+  size: 13
+
+  # 正常
+  normal:
+    family: WenQuanYi Micro HeiMono
+    style:  Regular
+  # 粗体
+  bold:
+    family: WenQuanYi Micro HeiMono
+    style:  Bold
+  # 斜体
+  italic:
+    family: WenQuanYi Micro HeiMono
+    style:  Italic
+  # 粗斜体
+  bold_italic:
+    family: WenQuanYi Micro HeiMono
+    style:  Bold Italic
+  # 点大小
+  # size: 11.0
+
+# 主题
+colors:
+  # 默认颜色
+  primary:
+    # 背景
+    background: '0x191622'
+    # 前景
+    foreground: '0xe1e1e6'
+
+  # 光标颜色
+  cursor:
+    # 单元格背景
+    text: '0x191622'
+    # 光标
+    cursor: '0xf8f8f2'
+
+  # 正常颜色
+  normal:
+    black:   '0x000000'
+    red:     '0xff5555'
+    green:   '0x50fa7b'
+    yellow:  '0xeffa78'
+    blue:    '0xbd93f9'
+    magenta: '0xff79c6'
+    cyan:    '0x8d79ba'
+    white:   '0xbfbfbf'
+
+  # 鲜艳的颜色
+  bright:
+    black:   '0x4d4d4d'
+    red:     '0xff6e67'
+    green:   '0x5af78e'
+    yellow:  '0xeaf08d'
+    blue:    '0xcaa9fa'
+    magenta: '0xff92d0'
+    cyan:    '0xaa91e3'
+    white:   '0xe6e6e6'
+
+  # 暗淡的颜色
+  dim:
+    black:   '0x000000'
+    red:     '0xa90000'
+    green:   '0x049f2b'
+    yellow:  '0xa3b106'
+    blue:    '0x530aba'
+    magenta: '0xbb006b'
+    cyan:    '0x433364'
+    white:   '0x5f5f5f'
+
+# 选择
+selection:
+  #当设置为‘true’时，选定的文本将被复制到主剪贴板
+  save_to_clipboard: true
+
+# 光标
+cursor:
+  style:
+    shape: Block
+  # 光标闪烁：默认
+  blinking: On
+  # 光标闪烁时间间隔：毫秒
+  blink_interval: 750
+  # 闪烁超时：秒
+  blink_timeout: 5
+
+
+# shell
+shell:
+  program: /bin/zsh
+
+# 实时重载配置文件
+live_config_reload: true
