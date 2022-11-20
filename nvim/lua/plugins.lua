@@ -50,25 +50,45 @@ packer.startup({
         }
 
         -- treesitter
-        use({
+        use {
             "nvim-treesitter/nvim-treesitter",
             config = "require('plugin-config/nvim-treesitter')",
             run = ":TSUpdate",
-        })
+        }
 
         -- bufferline
-        use({
+        use {
             "akinsho/bufferline.nvim",
             config = "require('plugin-config/bufferline')",
             requires = "nvim-tree/nvim-web-devicons",
-        })
+        }
 
         -- lualine
-        use({
+        use {
             "nvim-lualine/lualine.nvim",
             config = "require('plugin-config/nvim-lines')",
             requires = "nvim-tree/nvim-web-devicons",
-        })
+        }
+
+        -- mason-lspconfig
+        use { "williamboman/mason.nvim" }
+        use {
+            "williamboman/mason-lspconfig.nvim",
+            config = "require('plugin-config/mason-lspconfig')",
+        }
+        use { "neovim/nvim-lspconfig" }
+
+        -- nvim-cmp
+        use {
+            "hrsh7th/nvim-cmp",
+            config = "require('plugin-config/nvim-cmp')",
+        }
+        use { "hrsh7th/cmp-nvim-lsp" }
+        use { "hrsh7th/cmp-buffer" }
+        use { "hrsh7th/cmp-path" }
+        use { "hrsh7th/cmp-cmdline" }
+        use { "L3MON4D3/LuaSnip" }
+        use { "saadparwaiz1/cmp_luasnip" }
 
     end,
     config = {
